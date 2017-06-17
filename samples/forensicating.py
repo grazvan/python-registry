@@ -181,6 +181,8 @@ def os_settings(sys_reg, soft_reg):
             os_dict['ProductId'] = v.value()              
         if v.name() == "CSDVersion":
             os_dict['CSDVersion'] = v.value()
+        else:
+            os_dict['CSDVersion'] = "None detected" # Fix bug when CSDVersion not present in Windows 10
         if v.name() == "PathName":
             os_dict['PathName'] = v.value()  
         if v.name() == "InstallDate":
